@@ -25,6 +25,10 @@ dependencies {
 
     testCompileOnly ("org.projectlombok:lombok:1.18.32")
     testAnnotationProcessor ("org.projectlombok:lombok:1.18.32")
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    implementation("org.apache.commons:commons-lang3:3.14.0")
+
 }
 
 tasks.test {
