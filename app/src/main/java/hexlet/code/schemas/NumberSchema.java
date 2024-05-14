@@ -1,6 +1,7 @@
 package hexlet.code.schemas;
 
 public class NumberSchema extends BaseSchema<Integer> {
+
     public NumberSchema required() {
         super.required();
         return this;
