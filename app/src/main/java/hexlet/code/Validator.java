@@ -13,7 +13,7 @@ public final class Validator {
         return new NumberSchema();
     }
 
-    public MapSchema map() {
+    public <K, V> MapSchema<K, V> map() {
         return new MapSchema<>();
     }
 }
