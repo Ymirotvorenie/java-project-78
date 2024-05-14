@@ -3,9 +3,9 @@ package hexlet.code.schemas;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MapSchema<K, V> extends BaseSchema<Map<K, V>> {
+public final class MapSchema<K, V> extends BaseSchema<Map<K, V>> {
 
-    Map<K, BaseSchema<V>> schemas;
+    private Map<K, BaseSchema<V>> schemas;
 
     @Override
     public boolean isValid(Map<K, V> data) {
