@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NumberSchemaTest {
+public final class NumberSchemaTest {
     private Validator validator;
 
     @BeforeEach
