@@ -12,15 +12,7 @@ public final class MapSchema<K, V> extends BaseSchema<Map<K, V>> {
         if (schemas == null) {
             return super.isValid(data);
         } else {
-            for (var element : data.entrySet()) {
-                K key = element.getKey();
-                V value = element.getValue();
-
-                if (!schemas.get(key).isValid(value)) {
-                    return false;
-                }
-            }
-            return true;
+            return shapeCheck(data);
         }
     }
 
@@ -37,6 +29,18 @@ public final class MapSchema<K, V> extends BaseSchema<Map<K, V>> {
     public MapSchema<K, V> sizeof(int count) {
         rules.put("sizeof", m -> m.entrySet().size() == count);
         return this;
+    }
+
+    public boolean shapeCheck(Map<K, V> data) {
+        for (var element : data.entrySet()) {
+            K key = element.getKey();
+            V value = element.getValue();
+
+            if (!schemas.get(key).isValid(value)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
 
