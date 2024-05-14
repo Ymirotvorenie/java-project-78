@@ -26,7 +26,8 @@ public final class MapSchemaTest {
 
         schema.required();
 
-        assertTrue(schema.isValid(new HashMap<String, String>()));
+        var emptyMap = new HashMap<String, String>();
+        assertTrue(schema.isValid(emptyMap));
         assertFalse(schema.isValid(null));
 
         var data = new HashMap<>(Map.of("key1", "value1", "key2", "value2"));
