@@ -20,7 +20,7 @@ public final class MapSchemaTest {
 
     @Test
     public void testMapSchema() {
-        var schema = validator.<String, String>map();
+        var schema = validator.map();
 
         assertTrue(schema.isValid(null));
 
@@ -43,7 +43,7 @@ public final class MapSchemaTest {
 
     @Test
     public void testMapSchemaShape() {
-        var schema = validator.<String, String>map();
+        var schema = validator.map();
 
         Map<String, BaseSchema<String>> schemas = new HashMap<>();
         schemas.put("firstName", validator.string().required());
