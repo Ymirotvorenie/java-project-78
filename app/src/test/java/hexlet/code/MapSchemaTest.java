@@ -45,7 +45,7 @@ public final class MapSchemaTest {
     public void testMapSchemaShape() {
         var schema = validator.map();
 
-        Map<String, BaseSchema<String>> schemas = new HashMap<>();
+        var schemas = new HashMap<String, BaseSchema<String>>();
         schemas.put("firstName", validator.string().required());
         schemas.put("lastName", validator.string().required().minLength(2));
 
