@@ -4,13 +4,8 @@ import org.apache.commons.lang3.StringUtils;
 
 public final class StringSchema extends BaseSchema<String> {
 
-    @Override
-    public boolean isValid(String text) {
-        if (StringUtils.isBlank(text)) {
-            return !isRequired;
-        } else {
-            return super.isValid(text);
-        }
+    public StringSchema() {
+        rules.put("required", StringUtils::isNoneBlank);
     }
 
     public StringSchema required() {
