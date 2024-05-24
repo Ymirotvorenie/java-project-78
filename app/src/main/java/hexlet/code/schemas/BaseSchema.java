@@ -23,12 +23,4 @@ public abstract class BaseSchema<T> {
 
     }
 
-    /**
-     * Changes required flag to true.
-     * @return this.
-     */
-    public BaseSchema<T> required() {
-        isRequired = true;
-        return this;
-    }
 }
