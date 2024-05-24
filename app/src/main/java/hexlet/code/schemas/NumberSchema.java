@@ -8,7 +8,7 @@ public final class NumberSchema extends BaseSchema<Integer> {
     }
 
     public NumberSchema required() {
-        super.required();
+        isRequired = true;
         return this;
     }
 
